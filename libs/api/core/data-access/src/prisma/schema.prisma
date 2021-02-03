@@ -45,3 +45,105 @@ model Email {
   // Enable when this is resolved https://github.com/prisma/prisma/issues/3387
   // @@unique([ownerId, primary])
 }
+
+
+
+enum InvestmentType {
+  LLC_Corporation_Trust
+  Joint_Investor
+  Individual_Investor
+  Limited_Partnership
+  Self_Directed_IRA
+}
+
+enum UserType {
+  Investor
+  Affiliate
+  SuperAffiliate
+}
+
+enum DocumentType {
+  Contract
+  OperatingAgreement
+  JoinderAgreement
+  DirectDeposit
+  NCNDA
+  W9
+  K9
+  SubscriptionAgreement
+  ContractorAgreement
+}
+
+model Investment {
+  id                     String                   @id @default(cuid())
+  createdAt              DateTime                 @default(now())
+  updatedAt              DateTime                 @default(now()) @updatedAt
+  name                   String?
+  type                   InvestmentType
+  investmentAmount       Float?
+  investedOn             DateTime?
+  percentOwnership       Float?
+  investingIn            Organization?            @relation(name: "Organization_InvestingIn", fields: [investingInId], references: [id])
+  investingInId          String?
+  investingPerson        User?                    @relation(fields: [investingPersonId], references: [id])
+  investingPersonId      String?
+  // investingOrganization Organization? @relation(name: "CorporateInvestments", fields: [investingOrganizationId], references: [id])
+  // investingOrganizationId String?
+  InvestmentDocument     InvestmentDocument[]
+  InvestmentDistribution InvestmentDistribution[]
+}
+
+model InvestmentDocument {
+  id           String      @id @default(cuid())
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @default(now()) @updatedAt
+  name         String?
+  investment   Investment? @relation(fields: [investmentId], references: [id])
+  investmentId String?
+  document     Document?   @relation(fields: [documentId], references: [id])
+  documentId   String?
+}
+
+model Document {
+  id                 String               @id @default(cuid())
+  createdAt          DateTime             @default(now())
+  updatedAt          DateTime             @default(now()) @updatedAt
+  name               String?
+  //attachment         Bytes
+  InvestmentDocument InvestmentDocument[]
+}
+
+model InvestmentDistribution {
+  id             String        @id @default(cuid())
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @default(now()) @updatedAt
+  name           String?
+  investment     Investment?   @relation(fields: [investmentId], references: [id])
+  investmentId   String?
+  distribution   Distribution? @relation(fields: [distributionId], references: [id])
+  distributionId String?
+}
+
+model Distribution {
+  id                     String                   @id @default(cuid())
+  createdAt              DateTime                 @default(now())
+  updatedAt              DateTime                 @default(now()) @updatedAt
+  name                   String?
+  distributionAmount     Float?
+  distributionDate       DateTime?
+  InvestmentDistribution InvestmentDistribution[]
+}
+
+model Organization {
+  id              String       @id @default(cuid())
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @default(now()) @updatedAt
+  name            String?
+  line1           String
+  line2           String
+  City            String
+  StateOrProvince String
+  PostalCode      String
+  Country         String
+  Investment      Investment[] @relation("Organization_InvestingIn")
+}
