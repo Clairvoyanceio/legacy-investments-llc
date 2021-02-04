@@ -129,6 +129,9 @@
     "web-ui-page-header": {
       "tags": ["scope:web", "type:ui"]
     },
+    "web-ui-sidebar": {
+      "tags": ["scope:web", "type:ui"]
+    },
     "web-ui-sidebar-page": {
       "tags": ["scope:web", "type:ui"]
     }

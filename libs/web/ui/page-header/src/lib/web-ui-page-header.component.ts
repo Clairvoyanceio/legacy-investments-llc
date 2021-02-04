@@ -3,12 +3,22 @@ import { Component, Input } from '@angular/core'
 @Component({
   selector: 'ui-page-header',
   template: `
-    <div class="flex justify-between items-center  px-6 py-3 mb-3 md:mb-6 bg-gray-800 text-gray-300 shadow rounded-md">
+    <!-- <div class="flex justify-between items-center px-6 py-3 mb-3 md:mb-6 bg-white dark:bg-gray-800 text-gray-300 shadow rounded-md">
       <div class="text-lg font-semibold">
         {{ title }}
       </div>
       <ui-button [label]="linkTitle" [routerLink]="linkPath"></ui-button>
-    </div>
+    </div> -->
+    <header class="bg-white  dark:bg-gray-800 text-gray-300 border-b border-gray-200">
+      <div class="max-w-7xl mx-auto py-4 sm:py-6 px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+        <h1 class="text-lg font-medium leading-6 text-gray-900 sm:truncate">
+          {{ title }}
+        </h1>
+        <div class="mt-0">
+          <ng-content select="ui-page-header"></ng-content>
+        </div>
+      </div>
+    </header>
   `,
 })
 export class WebUiPageHeaderComponent {
