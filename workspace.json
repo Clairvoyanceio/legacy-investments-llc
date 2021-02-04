@@ -862,6 +862,31 @@
           }
         }
       }
+    },
+    "web-ui-user-account-dropdown": {
+      "projectType": "library",
+      "root": "libs/web/ui/user-account-dropdown",
+      "sourceRoot": "libs/web/ui/user-account-dropdown/src",
+      "prefix": "ui",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/web/ui/user-account-dropdown/src/**/*.ts",
+              "libs/web/ui/user-account-dropdown/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/web/ui/user-account-dropdown"],
+          "options": {
+            "jestConfig": "libs/web/ui/user-account-dropdown/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {

@@ -129,10 +129,10 @@
     "web-ui-page-header": {
       "tags": ["scope:web", "type:ui"]
     },
-    "web-ui-sidebar": {
+    "web-ui-sidebar-page": {
       "tags": ["scope:web", "type:ui"]
     },
-    "web-ui-sidebar-page": {
+    "web-ui-user-account-dropdown": {
       "tags": ["scope:web", "type:ui"]
     }
   },
