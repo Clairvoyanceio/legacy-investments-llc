@@ -11,7 +11,14 @@ const mockCards: SimpleCard[] = [
 
 @Component({
   template: `
-    <ui-page headerTitle="Dashboard">
+    <ng-template #PageControls>
+      <div class="space-x-3">
+        <ui-button [label]="'Share'" [variant]="'secondary'"></ui-button>
+        <ui-button [label]="'Create'" [variant]="'primary'"></ui-button>
+      </div>
+    </ng-template>
+
+    <ui-page headerTitle="Dashboard" [headerControls]="PageControls">
       <div class="w-full pb-12">
         <ui-simple-card-grid [headerText]="'Pinned Investments'" [cards]="cards"></ui-simple-card-grid>
       </div>

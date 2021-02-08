@@ -8,8 +8,8 @@ import { Component, ElementRef, Input } from '@angular/core'
       </div>
       <ui-button [label]="linkTitle" [routerLink]="linkPath"></ui-button>
     </div> -->
-    <header class="bg-white  dark:bg-gray-800 text-gray-300 border-b border-gray-200">
-      <div class="max-w-7xl mx-auto py-4 sm:py-6 px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+    <header class="bg-white dark:bg-gray-800 text-gray-300 border-b border-gray-200">
+      <div class="max-w-7xl mx-auto h-16 px-4 sm:px-6 lg:px-8 flex justify-between items-center">
         <h1 class="text-lg font-medium leading-6 text-gray-900 sm:truncate">
           {{ title }}
         </h1>
