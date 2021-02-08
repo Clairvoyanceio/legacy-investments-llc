@@ -863,6 +863,31 @@
         }
       }
     },
+    "web-ui-simple-card-grid": {
+      "projectType": "library",
+      "root": "libs/web/ui/simple-card-grid",
+      "sourceRoot": "libs/web/ui/simple-card-grid/src",
+      "prefix": "ui",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/web/ui/simple-card-grid/src/**/*.ts",
+              "libs/web/ui/simple-card-grid/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/web/ui/simple-card-grid"],
+          "options": {
+            "jestConfig": "libs/web/ui/simple-card-grid/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
     "web-ui-user-account-dropdown": {
       "projectType": "library",
       "root": "libs/web/ui/user-account-dropdown",

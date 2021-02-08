@@ -1,5 +1,4 @@
-import { Component, Input } from '@angular/core'
-
+import { Component, ElementRef, Input } from '@angular/core'
 @Component({
   selector: 'ui-page-header',
   template: `
@@ -15,7 +14,8 @@ import { Component, Input } from '@angular/core'
           {{ title }}
         </h1>
         <div class="mt-0">
-          <ng-content select="ui-page-header"></ng-content>
+          <ng-container *ngTemplateOutlet="controls"></ng-container>
+          <!-- <ng-content select="ui-page-header"></ng-content> -->
         </div>
       </div>
     </header>
@@ -23,6 +23,7 @@ import { Component, Input } from '@angular/core'
 })
 export class WebUiPageHeaderComponent {
   @Input() title?: string
+  @Input() controls?: ElementRef
   @Input() linkPath?: string
   @Input() linkTitle?: string
 }
