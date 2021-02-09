@@ -6,6 +6,8 @@ import { WebUiPageModule } from '@nxpm-latest/web/ui/page'
 import { WebDashboardFeatureComponent } from './web-dashboard-feature.component'
 import { WebUiSimpleCardGridModule } from '@nxpm-latest/web/ui/simple-card-grid'
 import { WebUiButtonModule } from '@nxpm-latest/web/ui/button'
+import { WebUiDashboardTableModule } from '@nxpm-latest/web/ui/dashboard-table'
+import { WebUiContainerModule } from '@nxpm-latest/web/ui/container'
 
 @NgModule({
   declarations: [WebDashboardFeatureComponent],
@@ -13,7 +15,9 @@ import { WebUiButtonModule } from '@nxpm-latest/web/ui/button'
     CommonModule,
     WebCoreDataAccessModule,
     WebUiButtonModule,
+    WebUiContainerModule,
     WebUiSimpleCardGridModule,
+    WebUiDashboardTableModule,
     WebUiPageModule,
     RouterModule.forChild([{ path: '', pathMatch: 'full', component: WebDashboardFeatureComponent }]),
   ],

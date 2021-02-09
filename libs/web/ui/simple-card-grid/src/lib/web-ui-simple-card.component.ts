@@ -17,11 +17,15 @@ export interface SimpleCard {
         {{ firstLetterOfTitle }}
       </div>
       <div
-        class="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md truncate"
+        class="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 rounded-r-md truncate"
       >
         <div class="flex-1 px-4 py-2 text-sm truncate">
-          <a href="#" class="text-gray-900 font-medium hover:text-gray-600">{{ card.title }}</a>
-          <p class="text-gray-500">{{ card.subTitle }}</p>
+          <a
+            href="#"
+            class="text-gray-900 dark:text-gray-100 font-medium hover:text-gray-600 dark:hover:text-gray-300"
+            >{{ card.title }}</a
+          >
+          <p class="text-gray-500 dark:text-gray-400">{{ card.subTitle }}</p>
         </div>
         <div class="flex-shrink-0 pr-2">
           <button

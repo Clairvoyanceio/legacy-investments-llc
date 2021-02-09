@@ -114,6 +114,12 @@
     "web-ui-button": {
       "tags": ["scope:web", "type:ui"]
     },
+    "web-ui-container": {
+      "tags": ["scope:web", "type:ui"]
+    },
+    "web-ui-dashboard-table": {
+      "tags": ["scope:web", "type:ui"]
+    },
     "web-ui-form": {
       "tags": ["scope:web", "type:ui"]
     },

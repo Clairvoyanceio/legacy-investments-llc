@@ -19,15 +19,13 @@ const mockCards: SimpleCard[] = [
     </ng-template>
 
     <ui-page headerTitle="Dashboard" [headerControls]="PageControls">
-      <div class="w-full pb-12">
-        <ui-simple-card-grid [headerText]="'Pinned Investments'" [cards]="cards"></ui-simple-card-grid>
+      <div class="w-full py-6 bg-white dark:bg-gray-900 md:py-6 lg:py-6">
+        <ui-container>
+          <ui-simple-card-grid [headerText]="'Pinned Investments'" [cards]="cards"></ui-simple-card-grid>
+        </ui-container>
       </div>
-      <div class="card">
-        <div class="card-header">Dashboard</div>
-        <div class="card-body">
-          <pre>{{ me$ | async | json }}</pre>
-        </div>
-        <div class="card-footer">Server uptime: {{ uptime$ | async }}</div>
+      <div>
+        <ui-dashboard-table></ui-dashboard-table>
       </div>
     </ui-page>
   `,

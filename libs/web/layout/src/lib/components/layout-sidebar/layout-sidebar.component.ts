@@ -5,7 +5,9 @@ import { User } from '@nxpm-latest/web/core/data-access'
   selector: 'layout-sidebar',
   template: `
     <div class="hidden lg:flex lg:flex-shrink-0">
-      <div class="w-64 flex bg-gray-100 flex-col border-r border-gray-200 h-screen pt-5 pb-4">
+      <div
+        class="w-64 flex bg-gray-100 dark:bg-gray-800 flex-col border-r border-gray-200 dark:border-gray-700 h-screen pt-5 pb-4"
+      >
         <div class="flex items-center flex-shrink-0 px-6">
           <img
             class="h-8 w-auto"
@@ -24,8 +26,8 @@ import { User } from '@nxpm-latest/web/core/data-access'
             <ng-container *ngFor="let link of links">
               <a
                 [routerLink]="link.route"
-                routerLinkActive="text-gray-900 bg-gray-200 hover:bg-gray-200"
-                class="text-gray-700 hover:bg-gray-50 hover:text-gray-900 group flex pl-4 items-center px-2 py-2 text-sm font-medium rounded-md"
+                routerLinkActive="text-gray-900 bg-gray-200 dark:text-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-700"
+                class="text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-gray-100 group flex pl-4 items-center px-2 py-2 text-sm font-medium rounded-md"
               >
                 <!-- Current: "text-gray-500", Default: "text-gray-400 group-hover:text-gray-500" -->
                 <!-- Heroicon name: outline/home -->

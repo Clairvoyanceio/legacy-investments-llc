@@ -38,5 +38,7 @@ module.exports = {
     '<rootDir>/libs/web/ui/sidebar',
     '<rootDir>/libs/web/ui/user-account-dropdown',
     '<rootDir>/libs/web/ui/simple-card-grid',
+    '<rootDir>/libs/web/ui/dashboard-table',
+    '<rootDir>/libs/web/ui/container',
   ],
 }

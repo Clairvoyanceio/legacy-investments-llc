@@ -731,6 +731,50 @@
         }
       }
     },
+    "web-ui-container": {
+      "projectType": "library",
+      "root": "libs/web/ui/container",
+      "sourceRoot": "libs/web/ui/container/src",
+      "prefix": "ui",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/web/ui/container/src/**/*.ts", "libs/web/ui/container/src/**/*.html"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/web/ui/container"],
+          "options": {
+            "jestConfig": "libs/web/ui/container/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "web-ui-dashboard-table": {
+      "projectType": "library",
+      "root": "libs/web/ui/dashboard-table",
+      "sourceRoot": "libs/web/ui/dashboard-table/src",
+      "prefix": "ui",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/web/ui/dashboard-table/src/**/*.ts", "libs/web/ui/dashboard-table/src/**/*.html"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/web/ui/dashboard-table"],
+          "options": {
+            "jestConfig": "libs/web/ui/dashboard-table/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
     "web-ui-form": {
       "projectType": "library",
       "root": "libs/web/ui/form",

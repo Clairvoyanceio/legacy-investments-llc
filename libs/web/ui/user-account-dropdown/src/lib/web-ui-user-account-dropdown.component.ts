@@ -9,7 +9,7 @@ import { User } from '@nxpm-latest/web/core/data-access'
         <button
           (click)="toggleDropdownVisibility()"
           type="button"
-          class="group w-full bg-gray-100 rounded-md px-3.5 py-2 text-sm font-medium text-gray-700 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-purple-500"
+          class="group w-full bg-gray-100 dark:bg-gray-800 rounded-md px-3.5 py-2 text-sm font-medium text-gray-700 hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-purple-500"
           id="options-menu"
           aria-haspopup="true"
           aria-expanded="true"
@@ -18,14 +18,15 @@ import { User } from '@nxpm-latest/web/core/data-access'
             <span class="flex min-w-0 items-center justify-between space-x-3">
               <img class="w-10 h-10 bg-gray-300 rounded-full flex-shrink-0" [attr.src]="user.avatarUrl" alt="" />
               <span class="flex-1 min-w-0 text-left">
-                <span class="text-gray-900 text-sm font-medium truncate">{{ user.firstName }} {{ user.lastName }}</span
+                <span class="text-gray-900 dark:text-gray-100 text-sm font-medium truncate"
+                  >{{ user.firstName }} {{ user.lastName }}</span
                 ><br />
-                <span class="text-gray-500 text-sm truncate">@{{ user.username }}</span>
+                <span class="text-gray-500 dark:text-gray-400 text-sm truncate">@{{ user.username }}</span>
               </span>
             </span>
             <!-- Heroicon name: selector -->
             <svg
-              class="flex-shrink-0 h-5 w-5 text-gray-400 group-hover:text-gray-500"
+              class="flex-shrink-0 h-5 w-5 text-gray-400 dark:text-gray-500 group-hover:text-gray-500"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
               fill="currentColor"

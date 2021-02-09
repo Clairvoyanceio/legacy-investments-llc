@@ -42,6 +42,8 @@
       "@nxpm-latest/web/shell/feature": ["libs/web/shell/feature/src/index.ts"],
       "@nxpm-latest/web/style": ["libs/web/style/src/index.ts"],
       "@nxpm-latest/web/ui/button": ["libs/web/ui/button/src/index.ts"],
+      "@nxpm-latest/web/ui/container": ["libs/web/ui/container/src/index.ts"],
+      "@nxpm-latest/web/ui/dashboard-table": ["libs/web/ui/dashboard-table/src/index.ts"],
       "@nxpm-latest/web/ui/form": ["libs/web/ui/form/src/index.ts"],
       "@nxpm-latest/web/ui/icon": ["libs/web/ui/icon/src/index.ts"],
       "@nxpm-latest/web/ui/loader": ["libs/web/ui/loader/src/index.ts"],

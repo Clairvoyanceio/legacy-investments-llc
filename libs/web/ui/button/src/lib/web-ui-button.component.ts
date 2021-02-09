@@ -2,7 +2,8 @@ import { Component, EventEmitter, Input } from '@angular/core'
 
 const variantClasses = {
   primary: 'text-indigo-50 bg-indigo-700 border-indigo-600 hover:bg-indigo-800 focus:ring-indigo-500',
-  secondary: 'border-gray-300 text-gray-700 bg-white hover:bg-gray-50 focus:ring-indigo-500',
+  secondary:
+    'border-gray-30 dark:border-gray-700 text-gray-700 dark:text-gray-100 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 focus:ring-indigo-500',
 }
 
 @Component({

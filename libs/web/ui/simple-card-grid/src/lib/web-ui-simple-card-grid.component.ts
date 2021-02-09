@@ -5,7 +5,7 @@ import { SimpleCard } from './web-ui-simple-card.component'
   selector: 'ui-simple-card-grid',
   template: `
     <div>
-      <h2 class="text-gray-500 text-xs font-medium uppercase tracking-wide">{{ headerText }}</h2>
+      <h2 class="text-gray-500 dark:text-gray-400 text-xs font-medium uppercase tracking-wide">{{ headerText }}</h2>
       <ul class="mt-3 grid grid-cols-1 gap-5 sm:gap-6 sm:grid-cols-2 lg:grid-cols-4">
         <ng-container *ngFor="let card of cards">
           <li [ngClass]="colSpanClass">
