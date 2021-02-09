@@ -1,18 +1,17 @@
 import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { RouterModule } from '@angular/router'
-import { WebUiDashboardTable } from './web-ui-dashboard-table.component'
-import { WebUiMenuButtonModule } from '@nxpm-latest/web/ui/menu-button'
+import { WebUiMenuButtonComponent } from './web-ui-menu-button.component'
 
 @NgModule({
-  declarations: [WebUiDashboardTable],
-  exports: [WebUiDashboardTable],
+  declarations: [WebUiMenuButtonComponent],
+  exports: [WebUiMenuButtonComponent],
   imports: [
     CommonModule,
-    WebUiMenuButtonModule,
+
     RouterModule.forChild([
       /* {path: '', pathMatch: 'full', component: InsertYourComponentHere} */
     ]),
   ],
 })
-export class WebUiDashboardTableModule {}
+export class WebUiMenuButtonModule {}

@@ -129,6 +129,9 @@
     "web-ui-loader": {
       "tags": ["scope:web", "type:ui"]
     },
+    "web-ui-menu-button": {
+      "tags": ["scope:web", "type:ui"]
+    },
     "web-ui-page": {
       "tags": ["scope:web", "type:ui"]
     },

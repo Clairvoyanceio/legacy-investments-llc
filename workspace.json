@@ -841,6 +841,28 @@
         }
       }
     },
+    "web-ui-menu-button": {
+      "projectType": "library",
+      "root": "libs/web/ui/menu-button",
+      "sourceRoot": "libs/web/ui/menu-button/src",
+      "prefix": "ui",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/web/ui/menu-button/src/**/*.ts", "libs/web/ui/menu-button/src/**/*.html"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/web/ui/menu-button"],
+          "options": {
+            "jestConfig": "libs/web/ui/menu-button/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
     "web-ui-page": {
       "projectType": "library",
       "root": "libs/web/ui/page",

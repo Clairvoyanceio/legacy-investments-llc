@@ -47,6 +47,7 @@
       "@nxpm-latest/web/ui/form": ["libs/web/ui/form/src/index.ts"],
       "@nxpm-latest/web/ui/icon": ["libs/web/ui/icon/src/index.ts"],
       "@nxpm-latest/web/ui/loader": ["libs/web/ui/loader/src/index.ts"],
+      "@nxpm-latest/web/ui/menu-button": ["libs/web/ui/menu-button/src/index.ts"],
       "@nxpm-latest/web/ui/page": ["libs/web/ui/page/src/index.ts"],
       "@nxpm-latest/web/ui/page-header": ["libs/web/ui/page-header/src/index.ts"],
       "@nxpm-latest/web/ui/sidebar": ["libs/web/ui/sidebar/src/index.ts"],
