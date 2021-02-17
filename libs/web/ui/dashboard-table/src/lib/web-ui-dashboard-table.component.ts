@@ -33,7 +33,10 @@ import { Component } from '@angular/core'
               <td class="px-6 py-3 max-w-0 w-full whitespace-nowrap text-sm font-medium text-gray-900">
                 <div class="flex items-center space-x-3 lg:pl-2">
                   <div class="flex-shrink-0 w-2.5 h-2.5 rounded-full bg-pink-600" aria-hidden="true"></div>
-                  <a href="#" class="truncate hover:text-gray-600 dark:text-gray-100 dark:hover:text-gray-300">
+                  <a
+                    [routerLink]="'/investment/1'"
+                    class="truncate hover:text-gray-600 dark:text-gray-100 dark:hover:text-gray-300"
+                  >
                     <span>
                       GraphQL API
                       <span class="text-gray-500 dark:text-gray-400 font-normal">in Engineering</span>

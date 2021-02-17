@@ -38,6 +38,7 @@
       "@nxpm-latest/web/core/data-access": ["libs/web/core/data-access/src/index.ts"],
       "@nxpm-latest/web/core/feature": ["libs/web/core/feature/src/index.ts"],
       "@nxpm-latest/web/dashboard/feature": ["libs/web/dashboard/feature/src/index.ts"],
+      "@nxpm-latest/web/detail/feature": ["libs/web/detail/feature/src/index.ts"],
       "@nxpm-latest/web/layout": ["libs/web/layout/src/index.ts"],
       "@nxpm-latest/web/shell/feature": ["libs/web/shell/feature/src/index.ts"],
       "@nxpm-latest/web/style": ["libs/web/style/src/index.ts"],

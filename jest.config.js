@@ -41,5 +41,6 @@ module.exports = {
     '<rootDir>/libs/web/ui/dashboard-table',
     '<rootDir>/libs/web/ui/container',
     '<rootDir>/libs/web/ui/menu-button',
+    '<rootDir>/libs/web/feature/detail',
   ],
 }

@@ -30,6 +30,10 @@ const routes: Routes = [
         loadChildren: () => import('@nxpm-latest/web/dashboard/feature').then((m) => m.WebDashboardFeatureModule),
       },
       {
+        path: 'investment/:id',
+        loadChildren: () => import('@nxpm-latest/web/detail/feature').then((m) => m.WebFeatureDetailModule),
+      },
+      {
         path: 'not-found',
         loadChildren: () => import('./not-found/not-found.module').then((m) => m.NotFoundModule),
       },

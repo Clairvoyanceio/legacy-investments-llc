@@ -102,6 +102,9 @@
       "tags": [],
       "implicitDependencies": ["web"]
     },
+    "web-feature-detail": {
+      "tags": ["scope:web", "type:feature"]
+    },
     "web-layout": {
       "tags": ["scope:web", "type:layout"]
     },
