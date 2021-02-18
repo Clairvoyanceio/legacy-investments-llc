@@ -4,6 +4,7 @@ export interface SimpleCard {
   title?: string
   subTitle?: string
   bgColorClass?: string
+  path?: string
 }
 
 @Component({
@@ -21,7 +22,7 @@ export interface SimpleCard {
       >
         <div class="flex-1 px-4 py-2 text-sm truncate">
           <a
-            href="#"
+            [routerLink]="card.path"
             class="text-gray-900 dark:text-gray-100 font-medium hover:text-gray-600 dark:hover:text-gray-300"
             >{{ card.title }}</a
           >

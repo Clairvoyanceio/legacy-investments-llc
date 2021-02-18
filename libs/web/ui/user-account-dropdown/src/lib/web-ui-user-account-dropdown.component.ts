@@ -4,8 +4,8 @@ import { User } from '@nxpm-latest/web/core/data-access'
 @Component({
   selector: 'ui-user-account-dropdown',
   template: `
-    <div class="relative inline-block text-left w-full">
-      <div>
+    <div class="relative inline-block text-left w-full overflow-visible">
+      <div class="overflow-visible">
         <button
           (click)="toggleDropdownVisibility()"
           type="button"
@@ -119,5 +119,6 @@ export class WebUiUserAccountDropdownComponent {
 
   toggleDropdownVisibility() {
     this.dropdownVisible ? this.hideDropdown() : this.showDropdown()
+    console.log(this.dropdownVisible)
   }
 }

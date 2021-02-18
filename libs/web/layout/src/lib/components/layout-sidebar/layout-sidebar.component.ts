@@ -15,7 +15,7 @@ import { User } from '@nxpm-latest/web/core/data-access'
             alt="Workflow"
           />
         </div>
-        <div class="flex flex-col overflow-y-auto">
+        <div class="flex flex-col overflow-y-visible">
           <div class="px-3 mt-6">
             <ui-user-account-dropdown [user]="user"></ui-user-account-dropdown>
           </div>
