@@ -1,4 +1,5 @@
-import { Component } from '@angular/core'
+import { Component, Input } from '@angular/core'
+import { ColDef } from 'ag-grid-community'
 
 @Component({
   selector: 'ui-dashboard-table',
@@ -95,7 +96,7 @@ import { Component } from '@angular/core'
   `,
 })
 export class WebUiDashboardTable {
-  columnDefs = [{ field: 'make' }, { field: 'model' }, { field: 'price' }]
+  @Input() columnDefs: ColDef[]
 
   rowData = [
     { make: 'Toyota', model: 'Celica', price: 35000 },

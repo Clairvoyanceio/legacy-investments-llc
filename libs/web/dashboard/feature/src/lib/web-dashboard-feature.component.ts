@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core'
 import { WebCoreDataAccessService } from '@nxpm-latest/web/core/data-access'
 import { SimpleCard } from '@nxpm-latest/web/ui/simple-card-grid'
+import { ColDef } from 'ag-grid-community'
 import { fromEvent, Subject } from 'rxjs'
 import { distinctUntilChanged, takeUntil } from 'rxjs/operators'
 
@@ -28,13 +29,26 @@ const mockCards: SimpleCard[] = [
         </ui-container>
       </div>
       <div [style.height]="computedTableHeight">
-        <ui-dashboard-table></ui-dashboard-table>
+        <ui-dashboard-table [columnDefs]="columnDefs"></ui-dashboard-table>
       </div>
     </ui-page>
   `,
 })
 export class WebDashboardFeatureComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('FeaturedInvestments') featuredInvestmentsSection: ElementRef<HTMLDivElement>
+
+  columnDefs: ColDef[] = [
+    { field: 'make', headerName: 'Contract Category' },
+    { field: 'model', headerName: 'Total Tender To/From Customer' },
+    { field: 'price', headerName: 'Payable To Partner Of Sale' },
+    { field: 'a', headerName: 'Legacy Profit' },
+    { field: 'b', headerName: 'Management Profit' },
+    { field: 'c', headerName: 'Walmart Profit' },
+    { field: 'd', headerName: 'Gross Sales Revenue' },
+    { field: 'e', headerName: 'Gross Shipping Revenue' },
+    { field: 'f', headerName: 'Refunded Retail Sales' },
+    { field: 'g', headerName: 'Total Collected' },
+  ]
 
   destroyed$ = new Subject<void>()
   featuredInvestmentsSectionHeight: number
