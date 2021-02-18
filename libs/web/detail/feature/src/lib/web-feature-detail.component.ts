@@ -33,7 +33,7 @@ export class WebDetailFeatureComponent {
   tabDefs = [
     { label: 'Overview', path: `overview` },
     { label: 'Performance', path: `performance` },
-    { label: 'Distribution', path: `distribution` },
+    { label: 'Distribution', path: `distributions` },
   ]
 
   columnDefs = [

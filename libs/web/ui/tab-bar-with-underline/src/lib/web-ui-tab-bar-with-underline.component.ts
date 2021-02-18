@@ -25,53 +25,29 @@ export interface TabDef {
         </select>
       </div>
       <div class="hidden sm:block">
-        <nav class="relative z-0 rounded-lg shadow flex divide-x divide-gray-200" aria-label="Tabs">
+        <nav
+          class="relative text-gray-500 hover:text-gray-700 z-0 rounded-lg shadow flex divide-x divide-gray-200"
+          aria-label="Tabs"
+        >
           <ng-container *ngFor="let tab of tabDefs; let first = first; let last = last">
             <a
-              href="#"
+              [routerLink]="tab.path"
+              routerLinkActive="text-gray-900"
               aria-current="page"
               [class.rounded-l-lg]="first"
               [class.rounded-r-lg]="last"
-              class="text-gray-900  group relative min-w-0 flex-1 overflow-hidden bg-white py-4 px-4 text-sm font-medium text-center hover:bg-gray-50 focus:z-10"
+              class="group relative min-w-0 flex-1 overflow-hidden bg-white py-4 px-4 text-sm font-medium text-center hover:bg-gray-50 focus:z-10"
             >
-              {{ tab.label }}
+              <span>{{ tab.label }}</span>
+              <span
+                [style.pointer-events]="'none'"
+                [routerLink]="tab.path"
+                routerLinkActive="bg-indigo-500"
+                aria-hidden="true"
+                class="absolute inset-x-0 bottom-0 h-0.5"
+              ></span>
             </a>
           </ng-container>
-          <!-- <a
-            href="#"
-            aria-current="page"
-            class="text-gray-900 rounded-l-lg group relative min-w-0 flex-1 overflow-hidden bg-white py-4 px-4 text-sm font-medium text-center hover:bg-gray-50 focus:z-10"
-          >
-            <span>My Account</span>
-            <span aria-hidden="true" class="bg-indigo-500 absolute inset-x-0 bottom-0 h-0.5"></span>
-          </a> -->
-
-          <!-- <a
-            href="#"
-            aria-current="false"
-            class="text-gray-500 hover:text-gray-700 group relative min-w-0 flex-1 overflow-hidden bg-white py-4 px-4 text-sm font-medium text-center hover:bg-gray-50 focus:z-10"
-          >
-            <span>Company</span>
-            <span aria-hidden="true" class="bg-transparent absolute inset-x-0 bottom-0 h-0.5"></span>
-          </a> -->
-
-          <!-- <a
-            href="#"
-            aria-current="false"
-            class="text-gray-500 hover:text-gray-700 group relative min-w-0 flex-1 overflow-hidden bg-white py-4 px-4 text-sm font-medium text-center hover:bg-gray-50 focus:z-10"
-          >
-            <span>Team Members</span>
-            <span aria-hidden="true" class="bg-transparent absolute inset-x-0 bottom-0 h-0.5"></span>
-          </a>
-
-          <a
-            href="#"
-            aria-current="false"
-            class="text-gray-500 hover:text-gray-700 rounded-r-lg group relative min-w-0 flex-1 overflow-hidden bg-white py-4 px-4 text-sm font-medium text-center hover:bg-gray-50 focus:z-10"
-          >
-            <span>Billing</span>
-            <span aria-hidden="true" class="bg-transparent absolute inset-x-0 bottom-0 h-0.5"></span>
-          </a> -->
         </nav>
       </div>
     </div>
