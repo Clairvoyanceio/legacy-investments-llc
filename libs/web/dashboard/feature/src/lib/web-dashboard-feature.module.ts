@@ -9,6 +9,7 @@ import { WebUiButtonModule } from '@nxpm-latest/web/ui/button'
 import { WebUiDashboardTableModule } from '@nxpm-latest/web/ui/dashboard-table'
 import { WebUiContainerModule } from '@nxpm-latest/web/ui/container'
 import { WebUiStatsSimpleModule } from '@nxpm-latest/web/ui/stats-simple'
+import { WebUiMenuButtonModule } from '@nxpm-latest/web/ui/menu-button'
 import { WebUiSimpleCustomDropdownModule } from '@nxpm-latest/web/ui/simple-custom-dropdown'
 
 @NgModule({
@@ -17,6 +18,7 @@ import { WebUiSimpleCustomDropdownModule } from '@nxpm-latest/web/ui/simple-cust
     CommonModule,
     WebCoreDataAccessModule,
     WebUiSimpleCustomDropdownModule,
+    WebUiMenuButtonModule,
     WebUiStatsSimpleModule,
     WebUiButtonModule,
     WebUiContainerModule,

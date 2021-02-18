@@ -11,6 +11,12 @@ import { takeUntil, distinctUntilChanged } from 'rxjs/operators'
           <ui-stats-simple></ui-stats-simple>
         </ui-container>
       </div>
+      <ui-container>
+        <h2 class="text-gray-500 dark:text-gray-400 text-xs font-medium uppercase tracking-wide py-2 bg-white">
+          Store Performance
+        </h2>
+      </ui-container>
+
       <div [style.height]="computedTableHeight" [style.max-width]="'calc(100vw - 264px)'">
         <ui-dashboard-table [columnDefs]="columnDefs"></ui-dashboard-table>
       </div>
