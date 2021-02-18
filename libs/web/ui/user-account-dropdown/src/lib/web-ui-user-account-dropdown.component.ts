@@ -17,7 +17,7 @@ import { User } from '@nxpm-latest/web/core/data-access'
           <span class="flex w-full justify-between items-center">
             <span class="flex min-w-0 items-center justify-between space-x-3">
               <img class="w-10 h-10 bg-gray-300 rounded-full flex-shrink-0" [attr.src]="user.avatarUrl" alt="" />
-              <span class="flex-1 min-w-0 text-left">
+              <span class="flex-1 min-w-0 text-left truncate overflow-x-hidden" [style.max-width.px]="160">
                 <span class="text-gray-900 dark:text-gray-100 text-sm font-medium truncate"
                   >{{ user.firstName }} {{ user.lastName }}</span
                 ><br />
