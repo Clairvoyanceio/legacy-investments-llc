@@ -6,7 +6,7 @@ import { Component } from '@angular/core'
       <ui-container>
         <ui-stats-simple></ui-stats-simple>
       </ui-container>
-      <div class="h-full w-full mt-6">
+      <div class="h-full w-full mt-6" [style.max-width]="'calc(100vw - 256px)'">
         <ag-grid-angular
           style="width: 100%; height: 100%;"
           class="ag-theme-alpine"
