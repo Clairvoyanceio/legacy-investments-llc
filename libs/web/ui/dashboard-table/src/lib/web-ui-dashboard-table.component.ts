@@ -3,9 +3,15 @@ import { Component } from '@angular/core'
 @Component({
   selector: 'ui-dashboard-table',
   template: `
-    <div class="hidden sm:block">
-      <div class="align-middle inline-block min-w-full border-b border-gray-200 dark:border-gray-700">
-        <table class="min-w-full">
+    <div class="hidden sm:block h-full border">
+      <div class="align-middle inline-block min-w-full h-full border-b border-gray-200 dark:border-gray-700">
+        <ag-grid-angular
+          style="width: 100%; height: 100%;"
+          class="ag-theme-alpine"
+          [rowData]="rowData"
+          [columnDefs]="columnDefs"
+        ></ag-grid-angular>
+        <!-- <table class="min-w-full">
           <thead>
             <tr class="border-t border-gray-200 dark:border-gray-700">
               <th
@@ -79,16 +85,21 @@ import { Component } from '@angular/core'
                 March 17, 2020
               </td>
               <td class="pr-6">
-                <!-- DROPDOWN HERE -->
                 <ui-menu-button></ui-menu-button>
               </td>
             </tr>
-
-            <!-- More items... -->
           </tbody>
-        </table>
+        </table> -->
       </div>
     </div>
   `,
 })
-export class WebUiDashboardTable {}
+export class WebUiDashboardTable {
+  columnDefs = [{ field: 'make' }, { field: 'model' }, { field: 'price' }]
+
+  rowData = [
+    { make: 'Toyota', model: 'Celica', price: 35000 },
+    { make: 'Ford', model: 'Mondeo', price: 32000 },
+    { make: 'Porsche', model: 'Boxter', price: 72000 },
+  ]
+}

@@ -13,6 +13,7 @@ import { WebUiContainerModule } from '@nxpm-latest/web/ui/container'
   declarations: [WebDashboardFeatureComponent],
   imports: [
     CommonModule,
+
     WebCoreDataAccessModule,
     WebUiButtonModule,
     WebUiContainerModule,
