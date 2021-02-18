@@ -1023,6 +1023,31 @@
         }
       }
     },
+    "web-ui-tab-bar-with-underline": {
+      "projectType": "library",
+      "root": "libs/web/ui/tab-bar-with-underline",
+      "sourceRoot": "libs/web/ui/tab-bar-with-underline/src",
+      "prefix": "ui",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/web/ui/tab-bar-with-underline/src/**/*.ts",
+              "libs/web/ui/tab-bar-with-underline/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/web/ui/tab-bar-with-underline"],
+          "options": {
+            "jestConfig": "libs/web/ui/tab-bar-with-underline/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
     "web-ui-user-account-dropdown": {
       "projectType": "library",
       "root": "libs/web/ui/user-account-dropdown",

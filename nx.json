@@ -153,6 +153,9 @@
     "web-ui-stats-simple": {
       "tags": ["scope:web", "type:ui"]
     },
+    "web-ui-tab-bar-with-underline": {
+      "tags": ["scope:web", "type:ui"]
+    },
     "web-ui-user-account-dropdown": {
       "tags": ["scope:web", "type:ui"]
     }
