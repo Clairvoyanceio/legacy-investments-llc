@@ -9,10 +9,10 @@ import { takeUntil, distinctUntilChanged } from 'rxjs/operators'
         <div class="py-4">
           <ui-tab-bar-with-underline [tabDefs]="tabDefs"></ui-tab-bar-with-underline>
         </div>
-        <div>
-          <router-outlet></router-outlet>
-        </div>
       </ui-container>
+      <div class="h-full w-full">
+        <router-outlet></router-outlet>
+      </div>
 
       <!-- <div #StatsSection class="w-full py-6 bg-white dark:bg-gray-900 md:py-6 lg:py-6">
         <ui-container>
@@ -34,18 +34,5 @@ export class WebDetailFeatureComponent {
     { label: 'Overview', path: `overview` },
     { label: 'Performance', path: `performance` },
     { label: 'Distribution', path: `distributions` },
-  ]
-
-  columnDefs = [
-    { field: 'make', headerName: 'Contract Category' },
-    { field: 'model', headerName: 'Total Tender To/From Customer' },
-    { field: 'price', headerName: 'Payable To Partner Of Sale' },
-    { field: 'legacyProfit', headerName: 'Legacy Profit' },
-    { field: 'managementProfit', headerName: 'Management Profit' },
-    { field: 'walmartProfit', headerName: 'Walmart Profit' },
-    { field: 'grossSalesRevenue', headerName: 'Gross Sales Revenue' },
-    { field: 'grossShippingRevenue', headerName: 'Gross Shipping Revenue' },
-    { field: 'refundedRetailsSales', headerName: 'Refunded Retail Sales' },
-    { field: 'totalCollected', headerName: 'Total Collected' },
   ]
 }

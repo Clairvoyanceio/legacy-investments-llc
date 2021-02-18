@@ -11,8 +11,15 @@ import { WebUiTabBarWithUnderlineModule } from '@nxpm-latest/web/ui/tab-bar-with
 import { WebOverviewTabFeatureComponent } from './components/web-feature-overview-tab.component'
 import { WebDistributionsTabFeatureComponent } from './components/web-feature-distributions-tab.component'
 import { WebPerformanceTabFeatureComponent } from './components/web-feature-performance-tab.component'
+import { AgGridModule } from 'ag-grid-angular'
+
 @NgModule({
-  declarations: [WebDetailFeatureComponent, WebOverviewTabFeatureComponent],
+  declarations: [
+    WebDetailFeatureComponent,
+    WebOverviewTabFeatureComponent,
+    WebPerformanceTabFeatureComponent,
+    WebDistributionsTabFeatureComponent,
+  ],
   exports: [WebDetailFeatureComponent],
   imports: [
     CommonModule,
@@ -21,6 +28,7 @@ import { WebPerformanceTabFeatureComponent } from './components/web-feature-perf
     WebUiTabBarWithUnderlineModule,
     WebUiContainerModule,
     WebUiStatsSimpleModule,
+    AgGridModule.withComponents([]),
     RouterModule.forChild([
       {
         path: '',
