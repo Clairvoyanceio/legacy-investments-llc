@@ -43,5 +43,6 @@ module.exports = {
     '<rootDir>/libs/web/ui/menu-button',
     '<rootDir>/libs/web/feature/detail',
     '<rootDir>/libs/web/ui/stats-simple',
+    '<rootDir>/libs/web/ui/simple-custom-dropdown',
   ],
 }

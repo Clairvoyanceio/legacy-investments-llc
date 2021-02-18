@@ -24,8 +24,8 @@ const mockCards: SimpleCard[] = [
     <ui-page headerTitle="Dashboard">
       <div #FeaturedInvestments class="w-full py-6 bg-white dark:bg-gray-900 md:py-6 lg:py-6">
         <ui-container>
-          <!-- <ui-simple-card-grid [headerText]="'Pinned Investments'" [cards]="cards"></ui-simple-card-grid> -->
-          <ui-stats-simple></ui-stats-simple>
+          <ui-simple-card-grid [headerText]="'Pinned Investments'" [cards]="cards"></ui-simple-card-grid>
+          <!-- <ui-stats-simple></ui-stats-simple> -->
         </ui-container>
       </div>
       <div [style.height]="computedTableHeight" [style.max-width]="'calc(100vw - 264px)'">
