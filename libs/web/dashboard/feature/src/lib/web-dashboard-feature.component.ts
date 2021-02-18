@@ -1,9 +1,6 @@
-import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core'
+import { Component } from '@angular/core'
 import { WebCoreDataAccessService } from '@nxpm-latest/web/core/data-access'
 import { SimpleCard } from '@nxpm-latest/web/ui/simple-card-grid'
-import { ColDef } from 'ag-grid-community'
-import { fromEvent, Subject } from 'rxjs'
-import { distinctUntilChanged, takeUntil } from 'rxjs/operators'
 
 const mockCards: SimpleCard[] = [
   { title: 'Example Card 1', path: '/investment/1', subTitle: 'Example Subtitle', bgColorClass: 'bg-blue-600' },
@@ -16,21 +13,13 @@ const mockCards: SimpleCard[] = [
 
 @Component({
   template: `
-    <!-- <ng-template #PageControls>
-      <div class="space-x-3">
-        <ui-button [label]="'Share'" [variant]="'secondary'"></ui-button>
-        <ui-button [label]="'Create'" [variant]="'primary'"></ui-button>
-      </div>
-    </ng-template> -->
-
     <ui-page headerTitle="Dashboard">
       <div #FeaturedInvestments class="w-full py-6 bg-white dark:bg-gray-900 md:py-6 lg:py-6">
         <ui-container>
           <ui-simple-card-grid [headerText]="'Pinned Investments'" [cards]="cards"></ui-simple-card-grid>
-          <!-- <ui-stats-simple></ui-stats-simple> -->
         </ui-container>
       </div>
-      <div [style.height]="computedTableHeight" [style.max-width]="'calc(100vw - 264px)'">
+      <div [style.max-width]="'calc(100vw - 264px)'">
         <table class="min-w-full">
           <thead>
             <tr class="border-t border-gray-200 dark:border-gray-700">
@@ -78,26 +67,22 @@ const mockCards: SimpleCard[] = [
                       src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-1.2.1&ixqx=CSFCItvz2d&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                       alt=""
                     />
-
                     <img
                       class="max-w-none h-6 w-6 rounded-full ring-2 ring-white"
                       src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixqx=CSFCItvz2d&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                       alt=""
                     />
-
                     <img
                       class="max-w-none h-6 w-6 rounded-full ring-2 ring-white"
                       src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixqx=CSFCItvz2d&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                       alt=""
                     />
-
                     <img
                       class="max-w-none h-6 w-6 rounded-full ring-2 ring-white"
                       src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixqx=CSFCItvz2d&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                       alt=""
                     />
                   </div>
-
                   <span class="flex-shrink-0 text-xs leading-5 font-medium">+8</span>
                 </div>
               </td>
@@ -114,53 +99,10 @@ const mockCards: SimpleCard[] = [
     </ui-page>
   `,
 })
-export class WebDashboardFeatureComponent implements OnInit, AfterViewInit, OnDestroy {
-  @ViewChild('FeaturedInvestments') featuredInvestmentsSection: ElementRef<HTMLDivElement>
-
-  columnDefs: ColDef[] = [
-    { field: 'make', headerName: 'Contract Category' },
-    { field: 'model', headerName: 'Total Tender To/From Customer' },
-    { field: 'price', headerName: 'Payable To Partner Of Sale' },
-    { field: 'a', headerName: 'Legacy Profit' },
-    { field: 'b', headerName: 'Management Profit' },
-    { field: 'c', headerName: 'Walmart Profit' },
-    { field: 'd', headerName: 'Gross Sales Revenue' },
-    { field: 'e', headerName: 'Gross Shipping Revenue' },
-    { field: 'f', headerName: 'Refunded Retail Sales' },
-    { field: 'g', headerName: 'Total Collected' },
-  ]
-
-  destroyed$ = new Subject<void>()
-  featuredInvestmentsSectionHeight: number
-  windowResized$: Observable<any>
-
+export class WebDashboardFeatureComponent {
   uptime$ = this.data.uptimeWatch()
   me$ = this.data.me()
   cards = mockCards // TODO: For Dev Purposes
 
-  get computedTableHeight() {
-    return `calc(100% - ${this.featuredInvestmentsSectionHeight}px)`
-  }
-
   constructor(private readonly data: WebCoreDataAccessService) {}
-
-  ngOnInit() {
-    fromEvent(window, 'resize')
-      .pipe(distinctUntilChanged(), takeUntil(this.destroyed$))
-      .subscribe(this.measureFeaturedInvestmentsHeight)
-  }
-
-  ngAfterViewInit() {
-    this.measureFeaturedInvestmentsHeight()
-  }
-
-  ngOnDestroy() {
-    this.destroyed$.next()
-    this.destroyed$.complete()
-  }
-
-  measureFeaturedInvestmentsHeight() {
-    const { height } = this.featuredInvestmentsSection?.nativeElement?.getBoundingClientRect()
-    this.featuredInvestmentsSectionHeight = height
-  }
 }

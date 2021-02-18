@@ -11,12 +11,13 @@ import { WebUiContainerModule } from '@nxpm-latest/web/ui/container'
 import { WebUiStatsSimpleModule } from '@nxpm-latest/web/ui/stats-simple'
 import { WebUiMenuButtonModule } from '@nxpm-latest/web/ui/menu-button'
 import { WebUiSimpleCustomDropdownModule } from '@nxpm-latest/web/ui/simple-custom-dropdown'
-
+import { WebUiTableModule } from '@nxpm-latest/web/ui/table'
 @NgModule({
   declarations: [WebDashboardFeatureComponent],
   imports: [
     CommonModule,
     WebCoreDataAccessModule,
+    WebUiTableModule,
     WebUiSimpleCustomDropdownModule,
     WebUiMenuButtonModule,
     WebUiStatsSimpleModule,

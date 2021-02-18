@@ -39,6 +39,19 @@ export class WebDetailFeatureComponent implements OnDestroy, AfterViewInit, OnIn
     { field: 'g', headerName: 'Total Collected' },
   ]
 
+  displayedColumns = [
+    { field: 'make', label: 'Contract Category' },
+    { field: 'model', label: 'Total Tender To/From Customer' },
+    { field: 'price', label: 'Payable To Partner Of Sale' },
+    { field: 'legacyProfit', label: 'Legacy Profit' },
+    { field: 'managementProfit', label: 'Management Profit' },
+    { field: 'walmartProfit', label: 'Walmart Profit' },
+    { field: 'grossSalesRevenue', label: 'Gross Sales Revenue' },
+    { field: 'grossShippingRevenue', label: 'Gross Shipping Revenue' },
+    { field: 'refundedRetailsSales', label: 'Refunded Retail Sales' },
+    { field: 'totalCollected', label: 'Total Collected' },
+  ]
+
   destroyed$ = new Subject<void>()
   statsSectionHeight: number
   windowResized$: Observable<any>

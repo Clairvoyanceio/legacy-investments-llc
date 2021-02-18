@@ -45,5 +45,6 @@ module.exports = {
     '<rootDir>/libs/web/ui/stats-simple',
     '<rootDir>/libs/web/ui/simple-custom-dropdown',
     '<rootDir>/libs/web/ui/tab-bar-with-underline',
+    '<rootDir>/libs/web/ui/table',
   ],
 }
