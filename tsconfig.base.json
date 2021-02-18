@@ -54,6 +54,7 @@
       "@nxpm-latest/web/ui/sidebar": ["libs/web/ui/sidebar/src/index.ts"],
       "@nxpm-latest/web/ui/sidebar-page": ["libs/web/ui/sidebar-page/src/index.ts"],
       "@nxpm-latest/web/ui/simple-card-grid": ["libs/web/ui/simple-card-grid/src/index.ts"],
+      "@nxpm-latest/web/ui/stats-simple": ["libs/web/ui/stats-simple/src/index.ts"],
       "@nxpm-latest/web/ui/user-account-dropdown": ["libs/web/ui/user-account-dropdown/src/index.ts"]
     }
   },

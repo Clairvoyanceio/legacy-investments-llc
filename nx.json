@@ -147,6 +147,9 @@
     "web-ui-simple-card-grid": {
       "tags": ["scope:web", "type:ui"]
     },
+    "web-ui-stats-simple": {
+      "tags": ["scope:web", "type:ui"]
+    },
     "web-ui-user-account-dropdown": {
       "tags": ["scope:web", "type:ui"]
     }
