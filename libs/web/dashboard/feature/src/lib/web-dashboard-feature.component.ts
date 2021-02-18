@@ -14,21 +14,21 @@ const mockCards: SimpleCard[] = [
 
 @Component({
   template: `
-    <ng-template #PageControls>
+    <!-- <ng-template #PageControls>
       <div class="space-x-3">
         <ui-button [label]="'Share'" [variant]="'secondary'"></ui-button>
         <ui-button [label]="'Create'" [variant]="'primary'"></ui-button>
       </div>
-    </ng-template>
+    </ng-template> -->
 
-    <ui-page headerTitle="Dashboard" [headerControls]="PageControls">
+    <ui-page headerTitle="Dashboard">
       <div #FeaturedInvestments class="w-full py-6 bg-white dark:bg-gray-900 md:py-6 lg:py-6">
         <ui-container>
           <!-- <ui-simple-card-grid [headerText]="'Pinned Investments'" [cards]="cards"></ui-simple-card-grid> -->
           <ui-stats-simple></ui-stats-simple>
         </ui-container>
       </div>
-      <div [style.height]="computedTableHeight">
+      <div [style.height]="computedTableHeight" [style.max-width]="'calc(100vw - 264px)'">
         <ui-dashboard-table [columnDefs]="columnDefs"></ui-dashboard-table>
       </div>
     </ui-page>

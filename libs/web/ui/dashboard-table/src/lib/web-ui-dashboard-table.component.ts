@@ -4,8 +4,11 @@ import { ColDef } from 'ag-grid-community'
 @Component({
   selector: 'ui-dashboard-table',
   template: `
-    <div class="hidden sm:block h-full border">
-      <div class="align-middle inline-block min-w-full h-full border-b border-gray-200 dark:border-gray-700">
+    <div class="h-full">
+      <div
+        [style.max-width]="'calc(100vw - 256px)'"
+        class="align-middle inline-block min-w-full h-full border-b border-gray-200 dark:border-gray-700"
+      >
         <ag-grid-angular
           style="width: 100%; height: 100%;"
           class="ag-theme-alpine"
