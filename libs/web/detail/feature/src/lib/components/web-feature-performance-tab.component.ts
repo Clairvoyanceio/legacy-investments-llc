@@ -4,7 +4,15 @@ import { Component } from '@angular/core'
   template: `
     <div class="h-full w-full">
       <ui-container>
-        <ui-stats-simple></ui-stats-simple>
+        <div class="flex flex-col w-full">
+          <div class=" items-center grid grid-cols-4 gap-4 w-full">
+            <ui-simple-custom-dropdown label="Transaction Type"></ui-simple-custom-dropdown>
+            <ui-simple-custom-dropdown label="Fulfillment Type"></ui-simple-custom-dropdown>
+            <ui-simple-custom-dropdown label="Zip Code"></ui-simple-custom-dropdown>
+            <ui-simple-custom-dropdown label="Transaction Date Time"></ui-simple-custom-dropdown>
+          </div>
+          <ui-stats-simple></ui-stats-simple>
+        </div>
       </ui-container>
       <div class="h-full w-full mt-6" [style.max-width]="'calc(100vw - 256px)'">
         <ag-grid-angular

@@ -7,6 +7,7 @@ import { WebUiStatsSimpleModule } from '@nxpm-latest/web/ui/stats-simple'
 import { WebUiDashboardTableModule } from '@nxpm-latest/web/ui/dashboard-table'
 import { WebUiContainerModule } from '@nxpm-latest/web/ui/container'
 import { WebUiTabBarWithUnderlineModule } from '@nxpm-latest/web/ui/tab-bar-with-underline'
+import { WebUiSimpleCustomDropdownModule } from '@nxpm-latest/web/ui/simple-custom-dropdown'
 
 import { WebOverviewTabFeatureComponent } from './components/web-feature-overview-tab.component'
 import { WebDistributionsTabFeatureComponent } from './components/web-feature-distributions-tab.component'
@@ -26,6 +27,7 @@ import { AgGridModule } from 'ag-grid-angular'
     WebUiPageModule,
     WebUiDashboardTableModule,
     WebUiTabBarWithUnderlineModule,
+    WebUiSimpleCustomDropdownModule,
     WebUiContainerModule,
     WebUiStatsSimpleModule,
     AgGridModule.withComponents([]),

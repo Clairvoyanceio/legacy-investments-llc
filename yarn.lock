@@ -320,6 +320,13 @@
   dependencies:
     tslib "^2.0.0"
 
+"@angular/cdk-experimental@^11.2.1":
+  version "11.2.1"
+  resolved "https://registry.yarnpkg.com/@angular/cdk-experimental/-/cdk-experimental-11.2.1.tgz#3c1f9ffd7b32356011270fd253ac2eb27e984625"
+  integrity sha512-3c1AeEe0yYGnx2FkyKe93NlGIBDTJN01TdvDUv2Fep5rnHOr0a/O/w9BUe0LgK4TS1Io2h8wtuWP5TQJnMymTw==
+  dependencies:
+    tslib "^2.0.0"
+
 "@angular/cdk@^11.2.1":
   version "11.2.1"
   resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-11.2.1.tgz#c06aa5b0ac76706240a4851ff704d70cbc6f3bf5"

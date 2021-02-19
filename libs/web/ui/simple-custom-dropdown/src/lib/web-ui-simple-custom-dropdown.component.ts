@@ -1,19 +1,20 @@
-import { Component } from '@angular/core'
+import { Component, Input } from '@angular/core'
 
 @Component({
   selector: 'ui-simple-custom-dropdown',
   template: `
     <div>
-      <label id="listbox-label" class="block text-sm font-medium text-gray-700"> Assigned to </label>
+      <label id="listbox-label" class="block text-sm font-medium text-gray-700">{{ label }}</label>
       <div class="mt-1 relative">
         <button
           type="button"
           aria-haspopup="listbox"
           aria-expanded="true"
+          (click)="toggleDropdownVisible()"
           aria-labelledby="listbox-label"
           class="bg-white relative w-full border border-gray-300 rounded-md shadow-sm pl-3 pr-10 py-2 text-left cursor-default focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
         >
-          <span class="block truncate"> Tom Cook </span>
+          <span class="block truncate"> Value </span>
           <span class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
             <svg
               class="h-5 w-5 text-gray-400"
@@ -41,7 +42,7 @@ import { Component } from '@angular/core'
         From: "opacity-100"
         To: "opacity-0"
     -->
-        <div class="absolute mt-1 w-full rounded-md bg-white shadow-lg">
+        <div *ngIf="dropdownVisible" class="absolute mt-1 w-full rounded-md bg-white shadow-lg">
           <ul
             tabindex="-1"
             role="listbox"
@@ -93,6 +94,8 @@ import { Component } from '@angular/core'
   `,
 })
 export class WebUiSimpleCustomDropdownComponent {
+  @Input() label: string
+
   dropdownVisible: boolean = false
 
   toggleDropdownVisible() {
