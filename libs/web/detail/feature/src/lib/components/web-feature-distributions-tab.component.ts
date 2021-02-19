@@ -17,7 +17,7 @@ import { Component } from '@angular/core'
       <div class="h-full w-full mt-6" [style.max-width]="'calc(100vw - 256px)'">
         <ag-grid-angular
           style="width: 100%; height: 100%;"
-          class="ag-theme-alpine"
+          class="ag-theme-material"
           [columnDefs]="columnDefs"
         ></ag-grid-angular>
       </div>
