@@ -7,9 +7,7 @@ export class Seeder {
 
   constructor(private readonly schema: Schema) {
     if (process.env.DATABASE_URL) {
-      this.prisma = new PrismaClient({
-        datasources: { db: { url: process.env.DATABASE_URL } },
-      })
+      this.prisma = new PrismaClient({ datasources: { db: { url: process.env.DATABASE_URL } } })
       console.log(`Connected to ${process.env.DATABASE_URL}`)
     } else {
       console.warn(`Please provide DATABASE_URL`)
